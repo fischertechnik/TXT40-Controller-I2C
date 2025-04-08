@@ -38,7 +38,13 @@ Some examples of external I2c modules already exist. These examples can be impor
 
 | sensor chip |  ROBO Pro Coding program name |
 | ---         | ---                           |
+| PCA9685    | *test_PCA9685* |
+| Pixy2    | *test_pixy2_smbus* |
 | APDS9960    | *APDS9960_smbus* |
+| TCS34725    | *TCS34725_smbus* |
+|     | *test_rgbcolorsensor_smbus* |
+|     | *test_rgbcolorsensors_smbus* |
+
 
 ## fischertechnik I2C Sensors
 Some I2C addresses are already reserved, see e.g. [here](https://i2cdevices.org/addresses) or [www.i2c-bus.org](https://www.i2c-bus.org/). All fischertechnik I2C sensors are listed in the table below.
