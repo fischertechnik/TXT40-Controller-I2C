@@ -1,11 +1,11 @@
 >If you have any questions, please contact fischertechnik-technik@fischer.de
 
 # TXT 4.0 Controller - I2C
-The fischertechnik [TXT 4.0 controller](https://www.fischertechnik.de/en/toys/e-learning/txt-4-0-controller) has 2 connections labeled EXT1 and EXT2 (see picture). Both connections are connected to the internal I2C bus, see [RX Controller Operating Instructions](https://www.fischertechnik.de/-/media/fischertechnik/fite/service/elearning/lehren/txt40controller/fischertechnik-txt-operating-manual_en.pdf).
+The fischertechnik [TXT 4.0 controller](https://www.fischertechnik.de/en/toys/e-learning/txt-4-0-controller) has 2 connections labeled EXT1 and EXT2 (see 07 in the picture). Both connections are connected to the internal I2C bus, see [RX Controller Operating Instructions](https://www.fischertechnik.de/-/media/fischertechnik/fite/service/elearning/lehren/txt40controller/fischertechnik-txt-operating-manual_en.pdf).
 
 | TXT 4.0 Controller | 6-pin Assigment |
 | --- | --- |
-|<img src="" width="400">|<img src="https://github.com/user-attachments/assets/9121a6af-6fb6-44de-b255-afbd045acae8" width="400">|
+|<img src="https://github.com/user-attachments/assets/258e930e-3d88-402c-94c4-a39d4877b59c" width="400">|<img src="https://github.com/user-attachments/assets/9121a6af-6fb6-44de-b255-afbd045acae8" width="400">|
 
 > [!WARNING]
 > * Power supply for I2C is **3.3V**
