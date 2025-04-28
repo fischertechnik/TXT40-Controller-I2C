@@ -87,7 +87,7 @@ Some I2C addresses are already reserved, see e.g. [here](https://i2cdevices.org/
 |AGV charging module	     |-	            |0x26	      |Knobloch              |                         | Yes                     |                |
 |RESERVED                    |              |0x8          |                      | RESERVED                |                         |                |
 
-## Connector I2C - 10-pin  (Deprecated)
+## Connector I2C - 10-pin (TXT Controller, Deprecated)
 > [!WARNING]
 > * Power supply for I2C is 3.3V
 > * No separate power supply at the plug 
