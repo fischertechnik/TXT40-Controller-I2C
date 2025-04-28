@@ -15,22 +15,36 @@ TXT 4.0 controller uses Python3. The basic functions for I2C are listed [here](h
 
 ### I2C Imports
 ```python
-```
-
-### I2C Scan
-```python
+from smbus2 import SMBus, i2c_msg
 ```
 
 ### I2C Write Buffer
 ```python
+def i2cWriteBuffer(i2cAdr, write_buffer):
+    msg = i2c_msg.write(i2cAdr, write_buffer)
+    with SMBus(3) as bus:
+      bus.i2c_rdwr(msg)
 ```
 
 ### I2C Read Buffer
 ```python
+def i2cReadBuffer(i2cAdr, length):
+    msg = i2c_msg.read(i2cAdr, length)
+    with SMBus(3) as bus:
+      bus.i2c_rdwr(msg)
+    read_buffer = list(msg)
+    return read_buffer
 ```
 
 ### I2C Write Read Buffer
 ```python
+def i2cWriteReadBuffer(i2cAdr, write_buffer, read_length):
+    write = i2c_msg.write(i2cAdr, write_buffer)
+    read = i2c_msg.read(i2cAdr, read_length)
+    with SMBus(3) as bus:
+        bus.i2c_rdwr(write, read)
+    read_buffer = list(read)
+    return read_buffer
 ```
 
 ### Examples External I2C Modules
