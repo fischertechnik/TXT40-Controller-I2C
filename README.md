@@ -20,6 +20,25 @@ from smbus2 import SMBus, i2c_msg
 
 ![image](https://github.com/user-attachments/assets/5fe596f4-cf85-4ad7-ae19-ad16d4e908f9)
 
+### I2C Scan
+see [example](https://gist.github.com/kungpfui/54784ebc3b3ca72169c1839720b313bf)
+```python
+devices = []
+for addr in range(0x03, 0x77 + 1):
+    read = SMBus.read_byte, (addr,), {'force':force}
+    write = SMBus.write_byte, (addr, 0), {'force':force}
+    for func, args, kwargs in (read, write):
+        try:
+        	with SMBus(3) as bus:
+                data = func(bus, *args, **kwargs)
+                devices.append(addr)
+                break
+        except OSError as expt:
+            if expt.errno == 16:
+                # just busy, maybe permanent by a kernel driver or just temporary by some user code
+                pass
+```
+
 ### I2C Write Buffer
 ```python
 def i2cWriteBuffer(i2cAdr, write_buffer):
@@ -60,6 +79,7 @@ Some examples of external I2c modules already exist. These examples can be impor
 
 | sensor chip |  ROBO Pro Coding program name |
 | ---         | ---                           |
+|             | *test_smbus2_scan* |
 | PCA9685    | *test_PCA9685* |
 | Pixy2    | *test_pixy2_smbus* |
 | APDS9960    | *APDS9960_smbus* |
