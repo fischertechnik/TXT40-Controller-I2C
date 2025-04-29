@@ -85,7 +85,6 @@ Some I2C addresses are already reserved, see e.g. [here](https://i2cdevices.org/
 |RGB color sensor	         |213965	    |0x14	      |Knobloch              |                         | Yes (txtapi>=6.4.0)     |                |
 |NFC module	                 |-	            |0x24	      |PN532 NFC RFID Module |                         | Yes                     | Yes (C/C++)    |
 |AGV charging module	     |-	            |0x26	      |Knobloch              |                         | Yes                     |                |
-|RESERVED                    |              |0x8          |                      | RESERVED                |                         |                |
 
 ## Connector I2C - 10-pin (TXT Controller, Deprecated)
 > [!WARNING]
