@@ -18,13 +18,12 @@ TXT 4.0 controller uses Python3. The basic functions for I2C are listed [here](h
 from smbus2 import SMBus, i2c_msg
 ```
 
-![image](https://github.com/user-attachments/assets/5fe596f4-cf85-4ad7-ae19-ad16d4e908f9)
+![image](https://github.com/user-attachments/assets/f78215cd-699a-4b5a-932a-fc8a39ea4c96)
 
 ### I2C Scan
 see [example](https://gist.github.com/kungpfui/54784ebc3b3ca72169c1839720b313bf)
 ```python
 def i2cScan(force):
-    global devices, addr
     devices = []
     for addr in range(0x03, 0x77 + 1):
         read = SMBus.read_byte, (addr,), {'force':force}
