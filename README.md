@@ -23,19 +23,22 @@ from smbus2 import SMBus, i2c_msg
 ### I2C Scan
 see [example](https://gist.github.com/kungpfui/54784ebc3b3ca72169c1839720b313bf)
 ```python
-devices = []
-for addr in range(0x03, 0x77 + 1):
-    read = SMBus.read_byte, (addr,), {'force':force}
-    write = SMBus.write_byte, (addr, 0), {'force':force}
-    for func, args, kwargs in (read, write):
-        try:
-            with SMBus(3) as bus:
-                data = func(bus, *args, **kwargs)
-                devices.append(addr)
-                break
-        except OSError as expt:
-            if expt.errno == 16:
-                pass
+def i2cScan(force):
+    global devices, addr
+    devices = []
+    for addr in range(0x03, 0x77 + 1):
+        read = SMBus.read_byte, (addr,), {'force':force}
+        write = SMBus.write_byte, (addr, 0), {'force':force}
+        for func, args, kwargs in (read, write):
+            try:
+            	with SMBus(3) as bus:
+                    data = func(bus, *args, **kwargs)
+                    devices.append(addr)
+                    break
+            except OSError as expt:
+                if expt.errno == 16:
+                    pass
+    return devices
 ```
 
 ![image](https://github.com/user-attachments/assets/3f9265fc-0433-491c-84ba-a898eb56c80a)
