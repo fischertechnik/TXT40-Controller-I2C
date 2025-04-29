@@ -39,6 +39,8 @@ for addr in range(0x03, 0x77 + 1):
                 pass
 ```
 
+![image](https://github.com/user-attachments/assets/3f9265fc-0433-491c-84ba-a898eb56c80a)
+
 ### I2C Write Buffer
 ```python
 def i2cWriteBuffer(i2cAdr, write_buffer):
