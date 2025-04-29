@@ -50,7 +50,7 @@ def i2cWriteBuffer(i2cAdr, write_buffer):
       bus.i2c_rdwr(msg)
 ```
 
-![image](https://github.com/user-attachments/assets/bb13738a-5212-4e18-aaab-44f64ac11423)
+![image](https://github.com/user-attachments/assets/2f7a7b2a-adf6-4284-941d-aa6847651cbe)
 
 ### I2C Read Buffer
 ```python
@@ -62,7 +62,7 @@ def i2cReadBuffer(i2cAdr, length):
     return read_buffer
 ```
 
-![image](https://github.com/user-attachments/assets/acf5bb99-6e98-4878-a909-f73eaa612fbf)
+![image](https://github.com/user-attachments/assets/2fbc5068-9418-40bd-b874-842caf4c5b1b)
 
 ### I2C Write Read Buffer
 ```python
@@ -75,7 +75,7 @@ def i2cWriteReadBuffer(i2cAdr, write_buffer, read_length):
     return read_buffer
 ```
 
-![image](https://github.com/user-attachments/assets/667996d1-073f-4509-8894-18610502f03c)
+![image](https://github.com/user-attachments/assets/3e03eac3-21a5-498f-bef7-57960154b80a)
 
 ### Examples External I2C Modules
 Some examples of external I2c modules already exist. These examples can be imported with the [ROBO Pro Coding](https://www.fischertechnik.de/en/apps-and-software#apps) app.
