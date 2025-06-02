@@ -90,6 +90,7 @@ Some examples of external I2c modules already exist. These examples can be impor
 |     | *test_rgbcolorsensor_smbus* |
 |     | *test_rgbcolorsensors_smbus* |
 
+[Further examples](https://elssner.github.io/ft-Controller-I2C/) of [I2C sensors](https://elssner.github.io/ft-Controller-I2C/#tabelle-1) can be found in a ROBO Pro Coding project called **ft_Controller_I2C**. The documentation (German) was created by the user [elssner](https://github.com/elssner). Many thanks for the very detailed examples!
 
 ## fischertechnik I2C Sensors
 Some I2C addresses are already reserved, see e.g. [here](https://i2cdevices.org/addresses) or [www.i2c-bus.org](https://www.i2c-bus.org/). All fischertechnik I2C sensors are listed in the table below.
